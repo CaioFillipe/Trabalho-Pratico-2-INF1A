@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Conta - Estante de Livros</title>
+    <link rel="icon" href="imgs/6c2589cd04394c6bac9f4bff26e58045.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Criar Conta</h1>
+        <form action="backend_php/sistemaregistro.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Criar Conta</button>
+        </form>
+        <p>Já tem uma conta? <a href="backend_php/sistemalogin.php">Faça login</a></p>
+    </div>
+</body>
+</html>
