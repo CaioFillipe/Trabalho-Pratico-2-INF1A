@@ -4,7 +4,7 @@ include('db.php');
 
 // Verificar se o usuário está logado
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.html");
+    header("Location: ../paginadelogin.html");
     exit();
 }
 
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $foto = $_FILES['foto']['name'];
     $usuario_id = $_SESSION['usuario']['id']; // Pegar o ID do usuário logado
 
-    $target_dir = "../assets/img/";
+    $target_dir = "..imgs_livros/";
     $target_file = $target_dir . basename($_FILES["foto"]["name"]);
 
     // Fazer upload da foto
@@ -25,9 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         // Redirecionar para a dashboard após adicionar o livro
-        header("Location: ../dashboard.php");
+        header("Location: ../paginadelivros.php");
     } else {
-        echo "<script>alert('Erro ao realizar o upload da foto selecionada.'); window.location.href='../dashboard.php';</script>";
+        echo "<script>
+        alert('Erro ao realizar o upload da foto selecionada.'); 
+        window.location.href='../paginadelivros.php';
+        </script>";
     }
 
     $stmt->close();

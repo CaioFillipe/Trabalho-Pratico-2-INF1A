@@ -25,7 +25,7 @@ if ($_POST) { //RECEBE A REQUISIÇÃO DO SISTEMA
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="assets/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="caixa">
