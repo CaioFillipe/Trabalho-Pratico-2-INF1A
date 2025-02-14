@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db   = 'teste';
+$db   = 'banco_dados';
 
 $conn = new mysqli($host, $user, $pass, $db);
 
