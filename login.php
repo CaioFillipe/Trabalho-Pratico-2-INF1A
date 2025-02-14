@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $usuario = $result->fetch_assoc();
         if (password_verify($senha, $usuario['senha'])) {
             $_SESSION['usuario'] = $usuario;
-            header("Location: dashboard.php");
+            header("Location: paginaLivros.php");
             exit();
         } else {
             $erro = "Senha incorreta!";
@@ -57,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </form>
             </div>
         </section>
-    </div>
+        <footer>
+            <a href="creditos.html" id="creditos">Créditos</a>
+        </footer>
+    </main>
 </body>
 </html>

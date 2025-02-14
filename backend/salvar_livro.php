@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("sssi", $titulo, $foto_nome, $categoria, $usuario_id);
 
         if ($stmt->execute()) {
-            header("Location: ../dashboard.php?sucesso=1");
+            header("Location: ../paginaLivros.php?sucesso=1");
         } else {
             echo "Erro ao salvar o livro: " . $stmt->error;
         }
